@@ -17,8 +17,6 @@
     background-size: cover; background-repeat: no-repeat; background-position: center;
 }
 
-
-
 .top10{
   background: red;
   display: flex;
@@ -34,14 +32,28 @@
   border-radius: 10px 15px;
 }
 
+.filmwrapper {
+  position: relative; 
+}
+
 .episodebaru {
+  display: flex;
   background: blue;
   font-size: 20px;
-  width: 70%;
+  width: 200px;
   border-radius: 10px;
-  z-index: 1;
-  position: relative;
-  top: -100px;
+  margin-left: 5px;
+}
+
+.episodebarufilm {
+  display: flex;
+  background: blue;
+  font-size: 20px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 90%;
 }
 
   .tombolkiri {
@@ -63,11 +75,6 @@
     margin-left: 250px; 
   }
 
-  .films0, .films1, .films2, .films3, .films4  {
-      width: 150px;
-      height: 250px;
-  }
-
   .top10{
     font-size: 11px;
     border-radius: 5px 10px;
@@ -75,6 +82,11 @@
   
   .episodebaru{
     font-size: 11px;
+  }
+
+  .episodebarufilm{
+    font-size: 11px;
+    width: 100px;
   }
 
   .tombolkiri, .tombolkanan{

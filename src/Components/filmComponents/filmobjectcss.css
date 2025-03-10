@@ -1,5 +1,5 @@
-
-  .filmobject {
+.filmobject {
+    display: flex;
     padding: 10px;
     text-align: center;
     width: 250px;
@@ -11,10 +11,8 @@
 
 
 @media only screen and (max-width: 600px) {
-
   .filmobject {
       width: 150px;
       height: 250px;
   }
-
 }

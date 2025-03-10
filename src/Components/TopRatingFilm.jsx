@@ -16,17 +16,17 @@ function TopRatingFilms () {
     <>
       <div className="arrayfilm">
         <div className="tombolkiri"><img src={TombolKiri}/></div>
+
         {topRatingFilms.map((film, index) => (
-            <div key={index}>{film}
+      <div key={index} className="filmwrapper">
 
-            {[0, 3].includes(index) &&  (
-            <div className="episodebaru">Episode Baru</div>
-          )}
-          </div>
-      ))}
+          {film}
+          {[0, 3].includes(index) && <div className="episodebarufilm">Episode Baru</div>}
+
+      </div>
+    ))}
+
           <div className="tombolkanan"><img src={TombolKanan}/></div>
-
-      
     </div>
     </>
 
