@@ -27,8 +27,8 @@
   height: 17%;
   margin-left: 75%;
   padding-top: 3%;
-  position: relative;
-  bottom: 10px;
+  position: absolute;
+  bottom: 83%;
   border-radius: 10px 15px;
 }
 
@@ -51,9 +51,9 @@
   font-size: 20px;
   width: 200px;
   border-radius: 10px;
-  margin-left: 5px;
   position: absolute;
   bottom: 90%;
+  left: 5%;
 }
 
   .tombolkiri {
