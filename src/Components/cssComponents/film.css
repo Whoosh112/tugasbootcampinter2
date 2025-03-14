@@ -60,14 +60,17 @@
     position: relative;
     left: 30px;
     background: transparent;
-    border: 0
+    border: 0;
+    z-index: 1
+
   }
   
   .tombolkanan {
     position: relative;
     right: 30px;
     background: transparent;
-    border: 0
+    border: 0;
+    z-index: 1
   }
 
 @media only screen and (max-width: 600px) {

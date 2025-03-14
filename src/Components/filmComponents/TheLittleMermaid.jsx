@@ -10,10 +10,12 @@ function TheLittleMermaid(){
         <>
         <div className="filmobject"  onClick={() => setIsOpen(true)} style={{ backgroundImage:`url(${theLittleMermaidPicture})`} }>
             {isOpen && (
+            <div className="overlay">
                 <div className="filmpopup">
-                    Muncullah Film Apalah Ini
+                    <div className="bigpicture" style={{backgroundImage:` url(${theLittleMermaidPicture})`}}></div>
                     <button onClick={()=>setIsOpen(false)}>X</button>
                 </div>
+            </div>
             )}
         </div>
         </>
