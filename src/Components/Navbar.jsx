@@ -3,10 +3,16 @@ const avatar = "/assets/assetgambar/assetgambarberanda/avatar.png";
 const keyboardarrowdown = "/assets/assetgambar/assetgambarberanda/KeyboardArrowDown.png";
 
 
+import { useState } from "react";
 import "./cssComponents/navbar.css"
 
 
 function Navbar(){
+    const [optionDown, setOptionDown] = useState(false)
+    const handleOptionDown = () => {
+        setOptionDown(prevState => !prevState);
+    }
+
     return (
     <>
         <nav className="navbar">
@@ -18,7 +24,16 @@ function Navbar(){
             </ul>
             <div className="profile">
                 <img src={avatar} width="50" height="50" alt="avatar" className="avatar"/>
-                <img src={keyboardarrowdown} width="25" height="25" alt="KeyboardArrowDown" className="KeyboardArrowDown"/>
+                <div className="optionbar" onClick={handleOptionDown}>
+                    <img src={keyboardarrowdown} width="25" height="25" alt="KeyboardArrowDown" className="KeyboardArrowDown"/>
+                    {optionDown && 
+                        <div className="optiondownbox">
+                            <div className="profileoption">Profil</div>
+                            <div className="ubahkepremiumoption">Ubah Ke Premium</div>
+                            <div className="keluaroption">Keluar</div>
+                        </div>
+                            }
+                </div>
             </div>
         </nav>
     </>

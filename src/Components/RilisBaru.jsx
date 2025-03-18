@@ -9,9 +9,10 @@ const TombolKanan = "/assets/assetgambar/assetgambarberanda/arrow-right.png";
 import "./cssComponents/film.css"
 
 
-const rilisBaru = [<TheLittleMermaid key={0}/>, <DutyAfterSchool key={1}/>, <BigHero6 key={2}/>, <AllOfUsAreDead key={3}/>, <Missing key={4}/>]
 
 function RilisBaru () {
+  const rilisBaru = [<TheLittleMermaid key={0}/>, <DutyAfterSchool key={1}/>, <BigHero6 key={2}/>, <AllOfUsAreDead key={3}/>, <Missing key={4}/>]
+
   return(
     <>
       <div className="arrayfilm">

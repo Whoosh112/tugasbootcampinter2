@@ -9,9 +9,9 @@ const TombolKanan = "/assets/assetgambar/assetgambarberanda/arrow-right.png";
 import "./cssComponents/film.css"
 
 
-const filmTrending = [<TheTomorrowWar key={0}/>, <Quantumania key={1}/>, <GuardianOfTheGalaxyVol3 key={2}/>, <AManCalledOtto key={3}/>, <TheLittleMermaid key={4}/>]
-
 function FilmTrending () {
+  const filmTrending = [<TheTomorrowWar key={0}/>, <Quantumania key={1}/>, <GuardianOfTheGalaxyVol3 key={2}/>, <AManCalledOtto key={3}/>, <TheLittleMermaid key={4}/>]
+
   return(
     <>
       <div className="arrayfilm">

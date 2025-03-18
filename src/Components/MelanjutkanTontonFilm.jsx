@@ -11,9 +11,10 @@ const TombolKanan = "/assets/assetgambar/assetgambarberanda/arrow-right.png";
 import "./cssComponents/melanjutkanTontonFilm.css"
 
 
-const films = [DontLookUpLanjut, AllOfUsAreDeadLanjut, BlueLockLanjut, AMancalledOttoLanjut]
 
 function MelanjutkanTontonFilm () {
+  const films = [DontLookUpLanjut, AllOfUsAreDeadLanjut, BlueLockLanjut, AMancalledOttoLanjut]
+
     return(
       <>
 

@@ -6,7 +6,10 @@ import Footer from "../Components/Footer";
 
 import "./cssPages/styleFavorit.css"
 
+
 function Favorit () {
+// const [listFavorit, setListFavorit] = useState([])
+
 useEffect(() => {
         document.body.classList.add("favoritpage");
     

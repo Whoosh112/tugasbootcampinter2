@@ -1,10 +1,13 @@
 import "../Components/cssComponents/inputbar.css";
 
-function Username(){
+function Username({value, onChange, error}){
     return(
     <div className="inputbar">
         <label>Username</label>
-        <input type="text" id="username" name="username" placeholder="Masukkan Username"/>
+        <br />
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <input type="text" id="username" name="username" placeholder="Masukkan Username" value={value}
+        onChange={onChange}/>
     </div>
     );
 }

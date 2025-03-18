@@ -1,5 +1,4 @@
 const bigHero6Picture = "../assets/assetgambar/assetgambarberanda/filmnya/bighero6.png";
-
 import { useState } from "react";
 
 import "../filmComponents/filmobjectcss.css"

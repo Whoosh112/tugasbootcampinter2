@@ -9,9 +9,9 @@ const TombolKanan = "../assets/assetgambar/assetgambarberanda/arrow-right.png";
 import "./cssComponents/film.css"
 
 
-const topRatingFilms = [<Suzume key={0}/>, <JurassicWorldDominion key={1} />, <Sonic2 key={2} />, <AllOfUsAreDead key={3} />, <BigHero6 key={4} />]
-
 function TopRatingFilms () {
+  const topRatingFilms = [<Suzume key={0}/>, <JurassicWorldDominion key={1} />, <Sonic2 key={2} />, <AllOfUsAreDead key={3} />, <BigHero6 key={4} />]
+
   return(
     <>
       <div className="arrayfilm">

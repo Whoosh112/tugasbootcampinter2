@@ -1,10 +1,11 @@
 import "../Components/cssComponents/inputbar.css";
 
-function KataSandi(){
+function KataSandi({value, onChange}){
     return(
-    <div className="inputBar">
+    <div className="inputbar">
         <label>Kata Sandi</label>
-        <input type="password" id="katasandi" name="katasandi" placeholder="Masukkan Kata Sandi"/>
+        <input type="password" id="katasandi" name="katasandi" placeholder="Masukkan Kata Sandi"   value={value}
+        onChange={onChange}/>
     </div>
     );
 }

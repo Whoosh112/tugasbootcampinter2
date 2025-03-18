@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Username from "../Components/Username";
 import KataSandi from "../Components/KataSandi";
@@ -10,7 +11,23 @@ const logoChill = "/assets/assetgambar/logochill.png";
 import "./cssPages/styleLogin.css"
 
 
-function Login () {
+function Login ({onLogin}) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const user = existingUsers.find((u) => u.username === username && u.password === password);
+
+    if (user) {
+      onLogin(username);
+      navigate("/beranda");
+    } else {
+      setError("Invalid username or password!");
+    }
+  };
   useEffect(() => {
     document.body.classList.add("loginpage");
 
@@ -20,7 +37,7 @@ function Login () {
   }, []);
 
    return (
-    <div className="loginscreen">
+    <form className="loginscreen">
       <div className="logo">
           <img src={logoChill} width="50%"/>
       </div>
@@ -29,18 +46,18 @@ function Login () {
           <p>Selamat datang kembali!</p>
         </div>
           <div className="username">
-            <Username />
+            <Username value={username} onChange={(e) => setUsername(e.target.value)} error={error}/>
           </div>
           <div className="katasandi">
-           <KataSandi />
+           <KataSandi value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <div className="masalahlogin">
             <SudahPunyaAkun />
           </div>
           <div className="loginbuttonbox">
-            <LoginButtonBox/>
+            <LoginButtonBox onClick={handleLogin}/>
         </div>
-    </div>
+    </form>
     )
 };
 
