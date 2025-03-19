@@ -5,10 +5,13 @@ import Beranda from "./Pages/Beranda";
 import Favorit from "./Pages/Favorit";
 import { useState, useEffect } from "react";
 
+
 import "./App.css";
 
 function App() {
 	const [user, setUser] = useState(null);
+
+
 
 	useEffect(() => {
 	  const storedUser = localStorage.getItem("user");
@@ -26,6 +29,7 @@ function App() {
 	const handleLogout = () => {
 	  localStorage.removeItem("user");
 	  setUser(null);
+
 	};
   
 
@@ -34,8 +38,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Register />} />
 				<Route path="/login" element={<Login onLogin={handleLogin}/>} />
-				<Route path="/beranda" element={<Beranda  user={user} onLogout={handleLogout}/>} />
-				<Route path="/favorit" element={<Favorit />} />
+				<Route path="/beranda" element={<Beranda user={user} onLogout={handleLogout}/>} />
+				<Route path="/favorit" element={<Favorit user={user} onLogout={handleLogout}/>} />
 			</Routes>
 		</BrowserRouter>
 	);

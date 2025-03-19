@@ -7,7 +7,9 @@ import Footer from "../Components/Footer";
 import "./cssPages/styleFavorit.css"
 
 
-function Favorit () {
+function Favorit ({onLogout}) {
+const user = JSON.parse(localStorage.getItem("user"));
+
 // const [listFavorit, setListFavorit] = useState([])
 
 useEffect(() => {
@@ -22,7 +24,7 @@ return (
     <>
     <div className="beranda">
       <div className="navbar">
-          <Navbar />
+          <Navbar user={user} onLogout={onLogout}/>
       </div>
       <div className="favoritarray">
         
