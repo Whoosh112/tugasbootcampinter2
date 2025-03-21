@@ -11,6 +11,10 @@
     margin: 10px;
   }
 
+  .welcomename{
+    margin:5px;
+  }
+
   .profile {
     display: flex;
     flex-direction: row;

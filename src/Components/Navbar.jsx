@@ -15,7 +15,7 @@ function Navbar({onLogout, user}){
         setOptionDown(prevState => !prevState);
     }
 
-    const confirmLogout = () => { navigate("/");} 
+    const confirmLogout = () => { navigate("/login");} 
 
 
     return (
@@ -28,7 +28,7 @@ function Navbar({onLogout, user}){
                 <li>Daftar Saya</li>
             </ul>
             <div className="profile">
-                <p>Welcome {user.username} </p>
+                <p className="welcomename">Welcome {user.username}</p>
                 <img src={avatar} width="50" height="50" alt="avatar" className="avatar"/>
                 <div className="optionbar" onClick={handleOptionDown}>
                     <img src={keyboardarrowdown} width="25" height="25" alt="KeyboardArrowDown" className="KeyboardArrowDown"/>

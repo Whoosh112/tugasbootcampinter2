@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import Username from "../Components/Username";
 import KataSandi from "../Components/KataSandi";
-import MasalahLogin from "../Components/MasalahLogin";
+import SudahPunyaAkun from "../Components/SudahPunyaAkun";
 import LoginButtonBox from "../Components/LoginButtonBox";
 import KataSandiUlang from "../Components/KataSandiUlang";
 import WelcomeRegister from "../Components/WelcomeRegister";
@@ -23,12 +23,12 @@ function Register () {
 
   const handleRegister = () => {
     if (!username || !password || !confirmPassword) {
-      setError("All fields are required!");
+      setError("Semua input harus diisi!");
       return;
     }
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match!");
+      setError("Password tidak sama!");
       return;
     }
 
@@ -36,7 +36,7 @@ function Register () {
     existingUsers.push({ username, password });
     localStorage.setItem("users", JSON.stringify(existingUsers));
 
-    alert("Registration successful! You can now log in.");
+    alert("Registrasi berhasil! Kamu sekarang bisa masuk.");
     navigate("/login");
   };
 
@@ -67,10 +67,10 @@ function Register () {
            />
           </div>
           <div className="masalahlogin">
-            <MasalahLogin />
+            <SudahPunyaAkun />
           </div>
           <div className="loginbuttonbox">
-            <LoginButtonBox onClick={handleRegister}/>
+            <LoginButtonBox onClick={(e) => {e.preventDefault(); handleRegister()}}/>
         </div>
   </form>
         )

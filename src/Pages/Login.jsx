@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Username from "../Components/Username";
 import KataSandi from "../Components/KataSandi";
 import LoginButtonBox from "../Components/LoginButtonBox";
-import SudahPunyaAkun from "../Components/SudahPunyaAkun";
+import MasalahLogin from "../Components/MasalahLogin";
+
 
 const logoChill = "/assets/assetgambar/logochill.png";
 
@@ -25,7 +26,7 @@ function Login ({onLogin}) {
       onLogin(username);
       navigate("/beranda");
     } else {
-      setError("Invalid username or password!");
+      setError("Username atau password salah!");
     }
   };
   useEffect(() => {
@@ -52,10 +53,10 @@ function Login ({onLogin}) {
            <KataSandi value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <div className="masalahlogin">
-            <SudahPunyaAkun />
+            <MasalahLogin />             
           </div>
           <div className="loginbuttonbox">
-            <LoginButtonBox onClick={handleLogin}/>
+            <LoginButtonBox onClick={(e) => {e.preventDefault(); handleLogin();}}/>
         </div>
     </form>
     )
