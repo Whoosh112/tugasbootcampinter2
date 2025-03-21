@@ -22,6 +22,12 @@ function Login ({onLogin}) {
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
     const user = existingUsers.find((u) => u.username === username && u.password === password);
 
+    if (!username || !password) {
+      setError("Harap mengisi input dengan lengkap!");
+      return;
+    }
+
+
     if (user) {
       onLogin(username);
       navigate("/beranda");
