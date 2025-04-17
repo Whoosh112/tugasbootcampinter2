@@ -51,9 +51,9 @@ function Register () {
   return (
   <form className="registerscreen">
         <div className="logo">
-          <img src={logoChill} width="50%"/>
+          <img src={logoChill} className="logochillregister"/>
         </div>
-        <div className="judul">
+        <div className="tempatjudul">
           <WelcomeRegister/>
         </div>
           <div className="username">

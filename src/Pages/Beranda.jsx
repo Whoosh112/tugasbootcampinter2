@@ -12,7 +12,6 @@ import Footer from "../Components/Footer";
 import "./cssPages/styleBeranda.css"
 
 function Beranda ({onLogout}) {
-const user = JSON.parse(localStorage.getItem("user"));
 useEffect(() => {
         document.body.classList.add("berandapage");
     
@@ -24,8 +23,8 @@ useEffect(() => {
 return (
     <>
     <div className="beranda">
-      <div className="navbar">
-          <Navbar user={user} onLogout={onLogout}/>
+      <div className="navibar">
+          <Navbar onLogout={onLogout}/>
       </div>
       <div className="hero">
           <Hero />

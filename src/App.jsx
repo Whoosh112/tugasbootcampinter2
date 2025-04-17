@@ -11,8 +11,6 @@ import "./App.css";
 function App() {
 	const [user, setUser] = useState(null);
 
-
-
 	useEffect(() => {
 	  const storedUser = localStorage.getItem("user");
 	  if (storedUser) {
@@ -29,7 +27,6 @@ function App() {
 	const handleLogout = () => {
 	  localStorage.removeItem("user");
 	  setUser(null);
-
 	};
   
 
@@ -46,3 +43,6 @@ function App() {
 }
 
 export default App;
+
+
+// urus register dan login logo dan responsivenya (hrsnya gampang yg ini)

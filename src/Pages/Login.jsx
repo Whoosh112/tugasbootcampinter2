@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import LoginRegister from "../Components/LoginRegister";
 import Username from "../Components/Username";
 import KataSandi from "../Components/KataSandi";
 import LoginButtonBox from "../Components/LoginButtonBox";
@@ -27,7 +28,6 @@ function Login ({onLogin}) {
       return;
     }
 
-
     if (user) {
       onLogin(username);
       navigate("/beranda");
@@ -45,12 +45,11 @@ function Login ({onLogin}) {
 
    return (
     <form className="loginscreen">
-      <div className="logo">
-          <img src={logoChill} width="50%"/>
-      </div>
-        <div className="judul">
-          <h1>Masuk</h1>
-          <p>Selamat datang kembali!</p>
+        <div className="logo">
+          <img src={logoChill} className="logochillregister"/>
+        </div>
+        <div className="tempatjudul">
+            <LoginRegister/>
         </div>
           <div className="username">
             <Username value={username} onChange={(e) => setUsername(e.target.value)} error={error}/>
